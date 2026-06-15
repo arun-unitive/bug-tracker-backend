@@ -23,8 +23,10 @@ const app = express();
 
 // Middleware - Allow all origins for deployment (or restrict to your Vercel domain)
 const corsOptions = {
-  origin: ['https://bug-tracker-frontend-wine.vercel.app'],
-  //origin: ['http://localhost:5173'],
+  origin: [
+    'https://bug-tracker-frontend-wine.vercel.app',
+    'http://localhost:5173'
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
